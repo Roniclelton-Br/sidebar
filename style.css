@@ -2,18 +2,72 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 :root {
   --color-bg: #000000;
-  --color-font-white: #ffffff
-  --color-font-gray: #e5e5e5
-  --color-bg-butons: #2f3336
+  --color-font-white: #ffffff;
+  --color-font-gray: #e5e5e5;
+  --color-bg-butons: #2f3336;
 
 }
 
 body {
-  margin: 0;
-  background: #000000;
+  background: var(--color-bg);
   color: #ffffff;
   font-family: sans-serif;
+  display: flex;
+}
+
+.sidebar-container {
+  width: 250px;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-right: 1px solid #e5e5e5;
+}
+.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s all ease-in-out;
+}
+.user a {
+  color: var(--color-font-gray);
+}
+.user a i {
+  font-size: 25px;
+}
+.user:hover{
+  background-color: var(--color-bg-butons);
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu li a{
+  color: var(--color-font-white);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+}
+.menu li a:hover {
+  background-color: var(--color-bg-butons);
+}
+.menu li a i {
+  font-size: 25px;
+}
+.menu li a span {
+  font-size: 18px;
+  margin-left: 10px;
 }
